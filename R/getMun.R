@@ -98,8 +98,8 @@ amostraBrasil <- function(codibge="",municipio="",listasetor=c(),N=0,geocod=F,sh
                         endIBGE=paste(str_trim(substr(dadost$V1,17,36))," ",ifelse(str_trim(substr(dadost$V1,37,66))=="","",paste(str_trim(substr(dadost$V1,37,66))," ",sep="")),str_trim(substr(dadost$V1,67,126)),", ",str_trim(substr(dadost$V1,127,134))," ",ifelse(codibge=="3550308" & dadost$V1>"",paste("0",substr(dadost$V1,551,554),sep=""),substr(dadost$V1,551,555)),"-",ifelse(codibge=="3550308" & dadost$V1>"",substr(dadost$V1,555,557),substr(dadost$V1,556,558)), sep="")
       )
       dadost<-subset(dadost,dadost$espend=="01" | dadost$espend=="02")
-#      dadost<-subset(dadost,dadost$espend=="06" & (grep("BAR ",dadost$desend)>0 | grep("BUTECO ",dadost$desend)>0))
-#      dadost<-subset(dadost,dadost$espend=="06" & (substr(dadost$desend,1,4)=="BAR " | substr(dadost$desend,1,7)=="BUTECO "))
+#      dadost<-subset(dadost,dadost$espend=="06" & (grep("GASOLINA",dadost$desend)>0 ))
+#      dadost<-subset(dadost,dadost$espend=="06" & (substr(dadost$desend,1,17)=="POSTO DE GASOLINA"  ))
       nrdadost<-nrow(dadost)
       n<-n+nrdadost
       message("Acrescentados ",nrdadost,iconv(" domic\u00EDlios (total: ","UTF-8","latin1"), n,")",sep="")
