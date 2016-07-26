@@ -17,7 +17,8 @@ getIBGEMunSHP <- function(codibge="",nomemun="")
   #testar length listasetor
   ##ftp://geoftp.ibge.gov.br/malhas_digitais/municipio_2013/SP/
   ## MYfilename<-paste("ftp://geoftp.ibge.gov.br/malhas_digitais/municipio_2013/",uf,"/",tolower(myMUN$UF),"_municipios.zip",sep="")
-  MYfilename<-paste("ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_de_setores_censitarios__divisoes_intramunicipais/censo_2010/setores_censitarios/",tolower(myMUN$UF),"/",tolower(myMUN$UF),"_municipios.zip",sep="")
+  ##MYfilename<-paste("ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_de_setores_censitarios__divisoes_intramunicipais/censo_2010/setores_censitarios/",tolower(myMUN$UF),"/",tolower(myMUN$UF),"_municipios.zip",sep="")
+  MYfilename<-paste("ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_de_setores_censitarios__divisoes_intramunicipais/censo_2010/setores_censitarios_shp/",tolower(myMUN$UF),"/",tolower(myMUN$UF),"_municipios.zip",sep="")
   message("")
   message(iconv("Buscando mapa do munic\u00EDpio (shp file)","UTF-8","latin1"))
   download.file(MYfilename,temp)
